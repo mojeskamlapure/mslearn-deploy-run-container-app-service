@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["SampleWeb/SampleWeb.csproj", "SampleWeb/"]
+COPY ["dotnet/SampleWeb/SampleWeb.csproj", "SampleWeb/"]
 RUN dotnet restore "SampleWeb/SampleWeb.csproj"
 COPY . .
 WORKDIR "/src/SampleWeb"
